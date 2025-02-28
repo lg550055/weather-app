@@ -8,7 +8,7 @@ async function getWeather() {
     try {
         const response = await fetch(apiURL);
         const data = await response.json();
-
+	console.log(`Data: {data}`)
         if (data.code === 200) {
             // Show weather data
             document.getElementById('cityName').textContent = `Weather in ${data.location.name}`;
